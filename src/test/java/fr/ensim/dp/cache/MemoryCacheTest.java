@@ -32,9 +32,13 @@ public class MemoryCacheTest {
 	@Test
 	public void testRetreive() {
 		MemoryCache memoryCache = MemoryCache.getInstance();
-		byte[] b = {6, 7, 9};
-		memoryCache.add("key3", b);
-		assertEquals(b[2],memoryCache.retreive("key3")[2]);
+		byte[] b3 = {6, 7, 9};
+		byte[] b4 = {2, 7, 18, 3};
+		memoryCache.add("key3", b3);
+		assertArrayEquals(b3, memoryCache.retreive("key3"));
+		memoryCache.add("key4", b4);
+		assertArrayEquals(b4, memoryCache.retreive("key4"));
+		assertArrayEquals(b3, memoryCache.retreive("key3"));
 	}
 
 	@Test

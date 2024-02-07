@@ -12,8 +12,7 @@ import java.io.InputStream;
  * @version 1.0
  */
 public final class FileUtil {
-  private FileUtil() {
-  }
+  private FileUtil() {}
 
   /**
    * @return Restitue le repertoire home de l'utilisateur.
@@ -24,7 +23,7 @@ public final class FileUtil {
 
   /**
    * Supprime un répertoire.
-   * 
+   *
    * @param path
    *          le répertoire.
    * @return <code>true</code> si ok

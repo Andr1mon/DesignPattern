@@ -1,9 +1,12 @@
 package fr.ensim.dp.cache;
 
+import java.util.HashMap;
+
 public class MemoryCache implements ICache {
     private static final MemoryCache singleton = new MemoryCache();
     private byte[] buf;
     private String key;
+    private HashMap<>; // finir
 
     private MemoryCache(){}
 
@@ -22,7 +25,7 @@ public class MemoryCache implements ICache {
     public boolean add(String key, byte[] buf) {
         if (!key.equals("") || !(buf == null)) {
             this.key = key;
-            this.buf = buf.clone();
+            this.buf = buf;
             return true;
         }
         return false;

@@ -1,5 +1,8 @@
 package fr.ensim.dp.cache;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 /**
  * @author Denis Apparicio
  *
@@ -21,7 +24,7 @@ public interface ICache {
    * @return <code>true</code> si la mise en cache a réussi,
    *         <code>false</code> sinon.
    */
-  boolean add(String key, byte[] buf);
+  boolean add(String key, byte[] buf) throws IOException;
 
   /**
    * Restitue le buffer en cache.
@@ -31,7 +34,7 @@ public interface ICache {
    * @return le buffer en cache ou <code>null</code> si pas de cache
    *         trouvé pour cette clé
    */
-  byte[] retreive(String key);
+  byte[] retreive(String key) throws IOException;
 
   /**
    * Efface le cache.
