@@ -9,8 +9,5 @@
         <module name="tp-designpattern-v3" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="tp-designpattern-v3" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
