@@ -1,15 +1,16 @@
 package fr.ensim.dp.cache;
 
-
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MemoryCacheTest {
-
 	@Test
 	public void testSize() {
-		fail("Not yet implemented");
+		MemoryCache memoryCache = MemoryCache.getInstance();
+		byte[] b = {12, 2, 3};
+		memoryCache.add("key1", b);
+		assertEquals(3, memoryCache.size());
 	}
 
 	@Test
@@ -19,17 +20,30 @@ public class MemoryCacheTest {
 		// byte [] b = {12,2 ,3} ,
 		// add("key1", b)
 		// Size vaut 3
-		//retreive 
-		
 	}
+
+	@Test
+	public void testSingleton() {
+		MemoryCache memoryCache1 = MemoryCache.getInstance();
+		MemoryCache memoryCache2 = MemoryCache.getInstance();
+		assertEquals(memoryCache1, memoryCache2);
+	}
+
 	@Test
 	public void testRetreive() {
-		fail("Not yet implemented");
+		MemoryCache memoryCache = MemoryCache.getInstance();
+		byte[] b = {6, 7, 9};
+		memoryCache.add("key3", b);
+		assertEquals(b[2],memoryCache.retreive("key3")[2]);
 	}
 
 	@Test
 	public void testClear() {
-		fail("Not yet implemented");
+		MemoryCache memoryCache = MemoryCache.getInstance();
+		byte[] b = {6, 7, 9};
+		memoryCache.add("key3", b);
+		memoryCache.clear();
+		assertEquals(0, memoryCache.size());
 	}
 
 }
