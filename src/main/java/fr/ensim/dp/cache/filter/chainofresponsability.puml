@@ -1,0 +1,41 @@
+@startuml
+interface IFilterCache {
+  byte[] doAdd(String key, byte[] buf);
+  byte[] doRetreive(String key, byte[] buf);
+  public IFilterCache setNext(IFilterCache next);
+}
+Class CountFilterCache
+note bottom of CountFilterCache
+Compte le nombre de
+mise en cache (doAdd)
+et le nombre de récupération
+du cache (doRetreive)
+end note
+
+Class EncryptFilterCache
+note bottom of EncryptFilterCache
+Chiffre la carte à mettre
+en cache (doAdd)
+Déchiffre la carte
+à restituer (doRetreive)
+end note
+
+Class LogFilterCache
+note bottom of LogFilterCache
+Trace la mise en cache
+en Log4J2 (doAdd)
+Trace la restitution d'une carte
+en Log4J2  (doRetreive)
+end note
+
+Class CompressFilterCache
+note bottom of CompressFilterCache
+Compresse le carte (doAdd)
+Décompresse la carte  (doRetreive)
+end note
+
+IFilterCache <|-- CountFilterCache
+IFilterCache <|-- LogFilterCache
+IFilterCache <|-- EncryptFilterCache
+IFilterCache <|-- CompressFilterCache
+@enduml

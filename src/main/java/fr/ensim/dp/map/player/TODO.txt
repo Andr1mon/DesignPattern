@@ -1,0 +1,4 @@
+Pattern State
+-------------------------
+
+Utilisez le pattern Etat pour décrire un player

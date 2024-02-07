@@ -1,0 +1,25 @@
+@startuml
+interface ICache {
+  long size();
+  boolean add(String key, byte[] buf);
+  byte[] retreive(String key);
+  void clear();
+}
+Class MemoryCache
+note left of MemoryCache
+Un cache mémoire
+pour toutes les cartes
+de l'application
+end note
+
+Class DiskCache
+note right of DiskCache
+Un cache disque par type
+de carte (mapnik, OSm France, Open TopoMap).
+Les cartes sont stockées dans un répertoire
+par type de carte.
+end note
+
+ICache <|-- MemoryCache
+ICache <|-- DiskCache
+@enduml

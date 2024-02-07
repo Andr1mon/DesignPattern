@@ -1,0 +1,7 @@
+Pattern chaine de responsabilité
+-----------------------------------
+
+1- Utiliser  la classe MemoryCache un cache mémoire l'application. MemoryCache
+2- Créer un cache DiskCache pour le cache disque pour l'application.
+   Il y a un cache disque par type de map
+3- Créer une Factory pour la cache mémoire et le cache disque.
