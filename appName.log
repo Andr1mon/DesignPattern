@@ -5264,3 +5264,9 @@
 2021-03-28 23:00:54,292 DEBUG fr.ensim.dp.map.tile.OpenStreetMapTileProviderInfo - <<getTileUrl http://tile.openstreetmap.org/14/8099/5756.png
 2021-03-28 23:00:54,292 DEBUG fr.ensim.dp.map.tile.OpenStreetMapTileProviderInfo - >>getTileUrl [8099, 5757, 3]
 2021-03-28 23:00:54,292 DEBUG fr.ensim.dp.map.tile.OpenStreetMapTileProviderInfo - <<getTileUrl http://tile.openstreetmap.org/14/8099/5757.png
+2024-02-28 16:33:03,289 DEBUG fr.ensim.dp.cache.filter.LogFilterCache - <<return doRetreive: First element and Last element of buffer [1, 4]
+2024-02-28 16:33:03,332 DEBUG fr.ensim.dp.cache.filter.LogFilterCache - >>return doAdd: First element and Last element of buffer [1, 4]
+2024-02-28 16:33:46,873 DEBUG fr.ensim.dp.cache.filter.LogFilterCache - <<return doRetreive: First element and Last element of buffer [1, 4]
+2024-02-28 16:33:46,912 DEBUG fr.ensim.dp.cache.filter.LogFilterCache - >>return doAdd: First element and Last element of buffer [1, 4]
+2024-02-28 16:33:56,481 DEBUG fr.ensim.dp.cache.filter.LogFilterCache - <<return doRetreive: First element and Last element of buffer [1, 4]
+2024-02-28 16:33:56,522 DEBUG fr.ensim.dp.cache.filter.LogFilterCache - >>return doAdd: First element and Last element of buffer [1, 4]

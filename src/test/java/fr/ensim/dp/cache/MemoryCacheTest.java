@@ -10,7 +10,7 @@ public class MemoryCacheTest {
 		MemoryCache memoryCache = MemoryCache.getInstance();
 		byte[] b = {12, 2, 3};
 		memoryCache.add("key1", b);
-		assertEquals(3, memoryCache.size());
+		assertEquals(1, memoryCache.size());
 	}
 
 	@Test

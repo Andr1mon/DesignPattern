@@ -56,7 +56,7 @@ public final class FileUtil {
       if (files != null) {
         for (File f : files) {
           if (f.isFile()) {
-            length += f.length();
+            length += 1;
           }
         }
       }
@@ -128,7 +128,6 @@ public final class FileUtil {
       while ((len = fis.read(buf)) != -1) {
         bos.write(buf, 0, len);
       }
-
       return bos.toByteArray();
     }
     finally {

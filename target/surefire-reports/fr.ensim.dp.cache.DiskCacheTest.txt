@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: fr.ensim.dp.cache.DiskCacheTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.09 s <<< FAILURE! - in fr.ensim.dp.cache.DiskCacheTest
+testClear  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ensim.dp.cache.DiskCache.clear()" because "mapnik" is null
+	at fr.ensim.dp.cache.DiskCacheTest.testClear(DiskCacheTest.java:92)
+
+testSize  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ensim.dp.cache.DiskCache.add(String, byte[])" because "mapnik" is null
+	at fr.ensim.dp.cache.DiskCacheTest.testSize(DiskCacheTest.java:22)
+
+testRetreive  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "fr.ensim.dp.cache.DiskCache.add(String, byte[])" because "mapnik" is null
+	at fr.ensim.dp.cache.DiskCacheTest.testRetreive(DiskCacheTest.java:65)
+

@@ -3,10 +3,10 @@ package fr.ensim.dp.cache;
 import java.util.HashMap;
 
 public class MemoryCache implements ICache {
-    private static final MemoryCache singleton = new MemoryCache();
+    private static MemoryCache singleton = new MemoryCache();
     private byte[] buf;
     private String key;
-    private HashMap<>; // finir
+    private HashMap<String, byte[]> hashMap = new HashMap<>();
 
     private MemoryCache(){}
 
@@ -16,16 +16,15 @@ public class MemoryCache implements ICache {
 
     @Override
     public long size() {
-        if (buf == null)
-            return 0;
-        return buf.length;
+        return hashMap.size();
     }
 
     @Override
     public boolean add(String key, byte[] buf) {
-        if (!key.equals("") || !(buf == null)) {
+        if (!key.equals("") && buf != null) {
             this.key = key;
             this.buf = buf;
+            hashMap.put(key, buf);
             return true;
         }
         return false;
@@ -33,14 +32,15 @@ public class MemoryCache implements ICache {
 
     @Override
     public byte[] retreive(String key) {
-        if (this.key.equals(key) && !key.equals(""))
-            return buf;
+        if (hashMap.containsKey(key))
+            return hashMap.get(key);
         return null;
     }
 
     @Override
     public void clear() {
-        buf = new byte[0];
+        buf = null;
         key = "";
+        hashMap.clear();
     }
 }
